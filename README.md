@@ -10,8 +10,8 @@ From the NuGet Package Manager Console:
 
 ### Register the dotless HTTP handler
 
-Add the following sections to your config file.
-The dotless HTTP handler intercepts all HTTP requests to files that end with .less
+Add the following sections to your config file.  
+The dotless HTTP handler intercepts all HTTP requests to files that end with .less  
 The handler will get the content of the .less file and transform it into proper css
 	
     <!-- Classic mode -->
