@@ -4,16 +4,19 @@
 
 ### Install dotless
 
-	`Install-Package dotless.Core`
+From the NuGet Package Manager Console:
+
+    Install-Package dotless.Core
 
 ### Register the dotless HTTP handler
 
-	The dotless HTTP handler intercepts all HTTP requests to files that end with .less
-	The handler will get the content of the .less file and transform it into proper css
+Add the following sections to your config file.
+The dotless HTTP handler intercepts all HTTP requests to files that end with .less
+The handler will get the content of the .less file and transform it into proper css
 	
     <!-- Classic mode -->
     <system.web>
-	  <httpHandlers>
+      <httpHandlers>
         <add path="*.less" verb="GET" type="dotless.Core.LessCssHttpHandler, dotless.Core" />
       </httpHandlers>
     </system.web>
@@ -26,6 +29,8 @@
     </system.webServer>
 	
 ### Configure dotless
+
+Add the following sections to your config file.
 
     <configSections>
       <section name="dotless" type="dotless.Core.configuration.DotlessConfigurationSectionHandler, dotless.Core" />
